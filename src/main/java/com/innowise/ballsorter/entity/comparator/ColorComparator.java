@@ -7,6 +7,6 @@ import java.util.Comparator;
 public class ColorComparator implements Comparator<Ball> {
     @Override
     public int compare(Ball o1, Ball o2) {
-        return o1.getColor().compareTo(o2.getColor());
+        return o1.getColor().name().compareTo(o2.getColor().name());
     }
 }
