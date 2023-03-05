@@ -1,7 +1,7 @@
-package entity;
+package com.innowise.ballsorter.entity;
 
-import utils.BallType;
-import utils.Color;
+import com.innowise.ballsorter.utils.BallType;
+import com.innowise.ballsorter.utils.Color;
 
 public abstract class Ball {
     private Color color;
