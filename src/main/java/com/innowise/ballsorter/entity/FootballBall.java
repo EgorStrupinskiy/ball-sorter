@@ -14,6 +14,11 @@ public class FootballBall extends Ball {
         this.season = season;
     }
 
+    @Override
+    public String getBallType() {
+        return FootballBall.class.getSimpleName();
+    }
+
     public FootballBall() {
     }
 

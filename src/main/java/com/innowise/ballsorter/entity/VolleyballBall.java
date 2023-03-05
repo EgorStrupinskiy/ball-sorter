@@ -14,6 +14,11 @@ public class VolleyballBall extends Ball {
         this.surfaceType = surfaceType;
     }
 
+    @Override
+    public String getBallType() {
+        return VolleyballBall.class.getSimpleName();
+    }
+
     public VolleyballBall() {
 
     }

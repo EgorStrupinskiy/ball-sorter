@@ -7,6 +7,8 @@ public abstract class Ball {
     private int size;
     private int weight;
 
+    public abstract String getBallType();
+
     public Color getColor() {
         return color;
     }
@@ -35,7 +37,7 @@ public abstract class Ball {
     public Ball() {
     }
 
-    public Ball(Color color, int size, int weight) {
+    protected Ball(Color color, int size, int weight) {
         this.color = color;
         this.size = size;
         this.weight = weight;
