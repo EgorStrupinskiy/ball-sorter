@@ -1,6 +1,5 @@
 package com.innowise.ballsorter.entity;
 
-import com.innowise.ballsorter.utils.BallType;
 import com.innowise.ballsorter.utils.Color;
 import com.innowise.ballsorter.utils.SurfaceType;
 
@@ -19,8 +18,8 @@ public class VolleyballBall extends Ball {
 
     }
 
-    public VolleyballBall(Color color, int size, int weight, BallType ballType, SurfaceType surfaceType) {
-        super(color, size, weight, ballType);
+    public VolleyballBall(Color color, int size, int weight, SurfaceType surfaceType) {
+        super(color, size, weight);
         this.surfaceType = surfaceType;
     }
 

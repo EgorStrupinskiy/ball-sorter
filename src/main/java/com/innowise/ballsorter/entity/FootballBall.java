@@ -1,6 +1,5 @@
 package com.innowise.ballsorter.entity;
 
-import com.innowise.ballsorter.utils.BallType;
 import com.innowise.ballsorter.utils.Color;
 import com.innowise.ballsorter.utils.Season;
 
@@ -18,8 +17,8 @@ public class FootballBall extends Ball {
     public FootballBall() {
     }
 
-    public FootballBall(Color color, int size, int weight, BallType ballType, Season season) {
-        super(color, size, weight, ballType);
+    public FootballBall(Color color, int size, int weight, Season season) {
+        super(color, size, weight);
         this.season = season;
     }
 
