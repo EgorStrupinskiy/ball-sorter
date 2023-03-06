@@ -54,7 +54,7 @@ public class HeapSorterTest {
         list.add(new VolleyballBall(Color.BLACK, 12, 200, SurfaceType.ASPHALT));
         list.add(new FootballBall(Color.RED, 14, 200, Season.SUMMER));
         list.add(new VolleyballBall(Color.WHITE, 10, 200, SurfaceType.SAND));
-        list.add(new FootballBall(Color.GREEN, 10, 200, Season.WINTER));
+        list.add(new FootballBall(Color.GREEN, 11, 200, Season.WINTER));
         return list;
     }
 

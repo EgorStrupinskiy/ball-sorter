@@ -15,7 +15,7 @@ public class ColorComparatorTest {
         var comparator = new ColorComparator();
         var first = getBall(Color.GREEN);
         var second = getBall(Color.RED);
-        var expected = -11;
+        var expected = -4;
 
         //when
         var actual = comparator.compare(first, second);
@@ -30,7 +30,7 @@ public class ColorComparatorTest {
         var comparator = new ColorComparator();
         var first = getBall(Color.RED);
         var second = getBall(Color.GREEN);
-        var expected = 11;
+        var expected = 4;
 
         //when
         var actual = comparator.compare(first, second);

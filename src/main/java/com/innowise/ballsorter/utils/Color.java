@@ -1,13 +1,13 @@
 package com.innowise.ballsorter.utils;
 
 public enum Color {
-    BLUE,
-    WHITE,
-    GREEN,
     BLACK,
-    RED,
-    PINK,
-    ORANGE,
+    BLUE,
+    BROWN,
+    GREEN,
     GREY,
-    BROWN
+    ORANGE,
+    PINK,
+    RED,
+    WHITE
 }

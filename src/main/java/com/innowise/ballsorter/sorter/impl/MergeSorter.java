@@ -3,36 +3,46 @@ package com.innowise.ballsorter.sorter.impl;
 
 import com.innowise.ballsorter.sorter.Sorter;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public class MergeSorter implements Sorter {
+    @Override
     public <T> void sort(List<T> list, Comparator<T> comparator) {
-        if (list.size() > 1) {
-            int middle = list.size() / 2;
-            List<T> leftList = list.subList(0, middle);
-            List<T> rightList = list.subList(middle, list.size());
-            sort(leftList, comparator);
-            sort(rightList, comparator);
-            merge(list, leftList, rightList, comparator);
-        }
+        int n = list.size();
+        if (n < 2)
+            return;
+
+        int mid = n / 2;
+        List<T> leftList = new ArrayList<>(list.subList(0, mid));
+        List<T> rightList = new ArrayList<>(list.subList(mid, n));
+
+        sort(leftList, comparator);
+        sort(rightList, comparator);
+
+        merge(leftList, rightList, list, comparator);
     }
 
-    private static <T> void merge(List<T> list, List<T> leftList, List<T> rightList, Comparator<T> comparator) {
+    private static <T> void merge(List<T> leftList, List<T> rightList, List<T> resultList, Comparator<T> comparator) {
+        int leftSize = leftList.size();
+        int rightSize = rightList.size();
         int i = 0, j = 0, k = 0;
-        while (i < leftList.size() && j < rightList.size()) {
+
+        while (i < leftSize && j < rightSize) {
             if (comparator.compare(leftList.get(i), rightList.get(j)) <= 0) {
-                list.set(k++, leftList.get(i++));
+                resultList.set(k++, leftList.get(i++));
             } else {
-                list.set(k++, rightList.get(j++));
+                resultList.set(k++, rightList.get(j++));
             }
         }
-        while (i < leftList.size()) {
-            list.set(k++, leftList.get(i++));
+
+        while (i < leftSize) {
+            resultList.set(k++, leftList.get(i++));
         }
-        while (j < rightList.size()) {
-            list.set(k++, rightList.get(j++));
+
+        while (j < rightSize) {
+            resultList.set(k++, rightList.get(j++));
         }
     }
-
 }
