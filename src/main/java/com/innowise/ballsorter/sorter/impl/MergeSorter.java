@@ -8,6 +8,13 @@ import java.util.Comparator;
 import java.util.List;
 
 public class MergeSorter implements Sorter {
+    /**
+     * Sorts the given list using the Merge sort algorithm.
+     *
+     * @param list the list to be sorted
+     * @param comparator the comparator to be used for sorting
+     * @param <T> the type of the elements in the list
+     */
     @Override
     public <T> void sort(List<T> list, Comparator<T> comparator) {
         int n = list.size();

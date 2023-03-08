@@ -7,6 +7,12 @@ import java.util.List;
 
 public class QuickSorter implements Sorter {
 
+    /**
+     * Sorts a given list using the quick sort algorithm.
+     * @param list the list to be sorted
+     * @param comparator the comparator to be used for sorting
+     * @param <T> the type of the elements in the list
+     */
     @Override
     public <T> void sort(List<T> list, Comparator<T> comparator) {
         quickSort(list, 0, list.size() - 1, comparator);

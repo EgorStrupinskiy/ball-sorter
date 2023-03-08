@@ -10,8 +10,6 @@ import com.innowise.ballsorter.utils.Season;
 import com.innowise.ballsorter.utils.SurfaceType;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Main {
