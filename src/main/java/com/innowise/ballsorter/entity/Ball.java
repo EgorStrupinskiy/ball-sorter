@@ -1,12 +1,13 @@
-package entity;
+package com.innowise.ballsorter.entity;
 
-import utils.BallType;
-import utils.Color;
+import com.innowise.ballsorter.utils.Color;
 
 public abstract class Ball {
     private Color color;
     private int size;
     private int weight;
+
+    public abstract String getBallType();
 
     public Color getColor() {
         return color;
@@ -36,7 +37,7 @@ public abstract class Ball {
     public Ball() {
     }
 
-    public Ball(Color color, int size, int weight, BallType ballType) {
+    protected Ball(Color color, int size, int weight) {
         this.color = color;
         this.size = size;
         this.weight = weight;
