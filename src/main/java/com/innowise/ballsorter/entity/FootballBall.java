@@ -5,6 +5,13 @@ import com.innowise.ballsorter.utils.Season;
 
 public class FootballBall extends Ball {
     private Season season;
+    public FootballBall() {
+    }
+
+    public FootballBall(Color color, int size, int weight, Season season) {
+        super(color, size, weight);
+        this.season = season;
+    }
 
     public Season getSeason() {
         return season;
@@ -19,13 +26,6 @@ public class FootballBall extends Ball {
         return FootballBall.class.getSimpleName();
     }
 
-    public FootballBall() {
-    }
-
-    public FootballBall(Color color, int size, int weight, Season season) {
-        super(color, size, weight);
-        this.season = season;
-    }
 
     @Override
     public boolean equals(Object o) {

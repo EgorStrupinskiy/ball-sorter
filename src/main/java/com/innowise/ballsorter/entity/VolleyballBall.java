@@ -5,6 +5,14 @@ import com.innowise.ballsorter.utils.SurfaceType;
 
 public class VolleyballBall extends Ball {
     private SurfaceType surfaceType;
+    public VolleyballBall() {
+
+    }
+
+    public VolleyballBall(Color color, int size, int weight, SurfaceType surfaceType) {
+        super(color, size, weight);
+        this.surfaceType = surfaceType;
+    }
 
     public SurfaceType getSurfaceType() {
         return surfaceType;
@@ -19,14 +27,6 @@ public class VolleyballBall extends Ball {
         return VolleyballBall.class.getSimpleName();
     }
 
-    public VolleyballBall() {
-
-    }
-
-    public VolleyballBall(Color color, int size, int weight, SurfaceType surfaceType) {
-        super(color, size, weight);
-        this.surfaceType = surfaceType;
-    }
 
     @Override
     public boolean equals(Object o) {

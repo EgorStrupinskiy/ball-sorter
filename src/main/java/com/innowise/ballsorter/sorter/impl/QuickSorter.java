@@ -9,6 +9,7 @@ public class QuickSorter implements Sorter {
 
     /**
      * Sorts a given list using the quick sort algorithm.
+     *
      * @param list the list to be sorted
      * @param comparator the comparator to be used for sorting
      * @param <T> the type of the elements in the list
@@ -44,5 +45,4 @@ public class QuickSorter implements Sorter {
         list.set(i, list.get(j));
         list.set(j, temp);
     }
-
 }
