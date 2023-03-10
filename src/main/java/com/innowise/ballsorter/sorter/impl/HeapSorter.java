@@ -9,17 +9,19 @@ import java.util.List;
  * Implements a sorting algorithm using the heap sort algorithm.
  */
 public class HeapSorter implements Sorter {
+
     /**
      * Sorts a given list using the heap sort algorithm.
-     * @param list the list to be sorted
+     *
+     * @param list       the list to be sorted
      * @param comparator the comparator to be used for sorting
-     * @param <T> the type of the elements in the list
+     * @param <T>        the type of the elements in the list
      */
     @Override
     public <T> void sort(List<T> list, Comparator<T> comparator) {
         int n = list.size();
 
-        for (int i = n / 2 - 1; i >= 0; i--){
+        for (int i = n / 2 - 1; i >= 0; i--) {
             heapify(list, n, i, comparator);
         }
 
@@ -33,14 +35,16 @@ public class HeapSorter implements Sorter {
 
     private static <T> void heapify(List<T> list, int n, int i, Comparator<T> comparator) {
         int largest = i;
-        int l = 2 * i + 1;
-        int r = 2 * i + 2;
+        int leftChild = 2 * i + 1;
+        int rightChild = 2 * i + 2;
 
-        if (l < n && comparator.compare(list.get(l), list.get(largest)) > 0)
-            largest = l;
+        if (leftChild < n && comparator.compare(list.get(leftChild), list.get(largest)) > 0) {
+            largest = leftChild;
+        }
 
-        if (r < n && comparator.compare(list.get(r), list.get(largest)) > 0)
-            largest = r;
+        if (rightChild < n && comparator.compare(list.get(rightChild), list.get(largest)) > 0) {
+            largest = rightChild;
+        }
 
         if (largest != i) {
             T swap = list.get(i);

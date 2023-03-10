@@ -7,6 +7,15 @@ public abstract class Ball {
     private int size;
     private int weight;
 
+    public Ball() {
+    }
+
+    protected Ball(Color color, int size, int weight) {
+        this.color = color;
+        this.size = size;
+        this.weight = weight;
+    }
+
     public abstract String getBallType();
 
     public Color getColor() {
@@ -33,16 +42,6 @@ public abstract class Ball {
         this.weight = weight;
     }
 
-
-    public Ball() {
-    }
-
-    protected Ball(Color color, int size, int weight) {
-        this.color = color;
-        this.size = size;
-        this.weight = weight;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,7 +62,8 @@ public abstract class Ball {
 
     @Override
     public String toString() {
-        return ", color=" + color +
+        return "Ball{" +
+                "color=" + color +
                 ", size=" + size +
                 ", weight=" + weight +
                 '}';
